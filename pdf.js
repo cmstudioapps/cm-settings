@@ -6,8 +6,8 @@ function gerar() {
   const estilos = {
     
     margin: [10,10,10,10],
-    backgroundColor: [cor],
-    color: [letra],
+    backgroundColor: cor,
+    color: letra,
     filename: nome
     
   }
@@ -15,4 +15,5 @@ function gerar() {
   
   html2pdf().set(estilos).from(conteudo).save()
   
+  window.location.href = nome+".pdf"
 }
