@@ -3,17 +3,26 @@ function gerar() {
   var nome = prompt("Digite o nome para o arquivo!"," PDF CM settings")
   var cor = prompt("Cor de fundo. (em inglês)","black").toLowerCase()
   var letra = prompt("Cor da letra. (em inglês)","white").toLowerCase()
+  var pai = document.getElementById("pai")
+  pai.innerHTML = `
+  <div style="text-align: center; background-color: ${cor}; color: ${letra}; height: 100%; width: 100%;">
+  <h2>${nome}</h2>
+  <br>
+  
+  <p>${conteudo}</p>
+  
+  </div>
+  `
   const estilos = {
     
-    margin: [10,10,10,10],
-    backgroundColor: cor,
-    color: letra,
+  
+    
     filename: nome
     
   }
   
   
-  html2pdf().set(estilos).from(conteudo).save()
+  html2pdf().set(estilos).from(pai).save()
   
   
 }
