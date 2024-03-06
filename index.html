@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>CM settings</title>
+</head>
+<body>
+  
+  <header>
+    
+    <img id="banner" src="banner.png">
+    
+    <p>Procurando uma ferramenta útil? temos várias!</p>
+    
+  </header>
+  <dialog id="dialogo">
+    
+    <h3>Atenção!</h3>
+    <p>Você está em uma versão ainda em produção!</p>
+    
+    <button onclick="fechar()">Fechar</button>
+    
+  </dialog>
+  <section>
+    
+    
+    
+ <button onclick="sites()">Acessar sites</button>
+  <br>
+  <button onclick="converter()">Conversor de dólares</button>
+  <br>
+  <button onclick="pdf()">Gerador de PDF</button>
+  <br>
+  <button onclick="palavras()">Gerador de palavras</button>
+  <br>
+  <button onclick="troco()">Trocos</button>
+    
+    
+  </section>
+  <script>
+    var banner = document.getElementById("banner")
+    setInterval(()=> {
+    if (innerWidth > 680) {
+      
+      banner.style.height = 110 + "vh"
+      
+    } else {
+      
+      banner.style.height = 50 + "vh"
+      
+      
+    }
+    
+    },1000)
+    
+  </script>
+  <script src="https://cmstudioapps.github.io/cmstudio-apps/dadosInfo.js"></script>
+  <script src="main.js">main.js</script>
+  <script src="avisos.js">avisos.js</script>
+</body>
+</html>

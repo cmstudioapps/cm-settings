@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sistema de troco</title>
+  
+  <style>
+    
+    body {
+      
+      background-color: black;
+      color: white;
+      text-align: center;
+      
+    }
+    
+    div {
+      
+    background-color: white;
+      color: black;
+      font-weight: bold;
+      border-radius: 1rem;
+      padding: 10px;
+      
+    }
+    
+    input, button {
+      background-color: lightgray;
+      padding: 10px;
+      border-radius: 20px;
+      border: none;
+      font-weight: bold;
+      outline: none;
+      
+      
+      
+    }
+    
+    
+  </style>
+</head>
+
+<body>
+  
+  <div>
+    
+  <h3>Valor do produto:</h3>
+    <input id="produto" type="number" placeholder="Valor do produto aqui...">
+    
+    <h3>Valor recebido</h3>
+    <input id="recebido" type="number" placeholder="valor entrgue pelo cliente...">
+    <button onclick="ok()">Confirmar</button>
+    <h3 id="resultado"></h3>
+  </div>
+  
+  
+<script>
+  
+  function ok() {
+    var produto = document.getElementById("produto").value
+    var recebido = document.getElementById("recebido").value
+    
+    var resultado = document.getElementById("resultado")
+    var troco = recebido - produto
+    if (troco < 0) {
+      
+      troco = 0
+      
+    }
+    resultado.innerHTML = "Você deve entregar de troco "+troco+" Reais!"
+    
+  }
+  
+  
+  
+</script>
+</body>
+
+</html>

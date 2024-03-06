@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Gerador de PDF</title>
+  
+  <style>
+  
+  body {
+    
+    background-color: black;
+    
+  }
+    #pai {
+    background-color: white;
+    border-radius: 20px;
+     margin-top: 15%;
+      text-align: center;
+      padding: 10px;
+      
+    }
+    
+    #conteudo {
+      
+      border: none;
+      background-color: lightgray;
+      border-radius: 10px;
+      outline: none;
+      
+      
+    }
+    
+    
+    button {
+background-color: greenyellow;
+  font-weight: bold;
+      padding: 10px;
+      cursor: pointer;
+      transition: all 4s;
+      transition-delay: 1s;
+      
+    }
+    
+    button:hover {
+      
+      background-color: lightgray;
+      
+    }
+  </style>
+</head>
+<body>
+  
+  <div id="pai">
+    <h3>Gerador de PDF</h3>
+    <textarea name="Conteúdo" id="conteudo" cols="30" rows="10" placeholder="Digite aqui um conteudo para o pdf" width="60%"></textarea>
+    <br>
+    <button onclick="gerar()">Gerar PDF</button>
+  </div>
+  
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="pdf.js">pdf</script>
+</body>
+</html>

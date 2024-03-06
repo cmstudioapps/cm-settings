@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  
+  <style>
+  body {
+    
+    text-align: center;
+    
+    
+  }
+    
+    #container-tv {
+      
+      position: relative;
+      
+      
+    }
+     #container-tv img {
+       
+       width: 100%;
+       height: 400px;
+       
+       
+     }
+    iframe {
+      
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      width: 90%;
+      height: 245px;
+      border-radius: 20px;
+    }
+    
+    input {
+    
+    background-color: lightgray;
+    color: black;
+    border-radius: 20px;
+    padding: 10px;
+    
+    border: none;
+    
+      
+    }
+    
+    
+  </style>
+</head>
+
+<body>
+
+
+ <div id="container-tv">
+   
+  <img src="monitor.png" alt="monitor.png" height="150px">
+  
+  <iframe id="tv" src="" frameborder="0" sandbox="allow-same-origin allow-scripts"></iframe>
+   
+ </div>
+
+
+  <input id="site" type="search" placeholder="digite aqui o site..." onkeyup="ver()">
+  
+  
+  <p>Não confia em um site? por isso não quer visitá-lo?<br>Cole o link aqui e navegue sem preocupação!</p>
+  <details>
+    
+    <summary>
+  Saiba mais sobre o Sistema de segurança.
+    </summary>
+    
+   O sistema de segurança usado aqui é o Sandbox, responsável por restringir a maioria das capiciades de um site, nós conseguimos bloquer o acesso ao suas informações para que elas não sejam usadas em anúncios, também bloqueamos pop-ups entre outras coisa que levam a sistemas maliciosos.
+     Tudo que você olhar aqui não estará presente em nenhum histórico.
+    
+  </details>
+<script src="https://cmstudioapps.github.io/Tuber-cm/dadosInfo.js"></script>
+<script>
+  
+  
+  var tv = document.getElementById("tv")
+  var site = document.getElementById("site").value
+  
+  
+  function ver() {
+    var site = document.getElementById("site").value.toLowerCase()
+    
+    if (site.includes("https://") || site.includes("https")) {
+    
+    tv.src = site
+    
+    } else {
+      
+      tv.src = "https://"+site
+      
+      
+    }
+    
+  }
+  
+
+  
+</script>
+
+
+</body>
+
+</html>
