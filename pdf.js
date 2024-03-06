@@ -13,7 +13,7 @@ function gerar() {
   }
   
   
-  html2pdf().set(estilos).from(conteudo).open()
+  html2pdf().set(estilos).from(conteudo).save()
   
   
 }
