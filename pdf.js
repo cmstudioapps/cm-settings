@@ -13,7 +13,7 @@ function gerar() {
   }
   
   
-  html2pdf().set(estilos).from(conteudo).save()
+  html2pdf().set(estilos).from(conteudo).save().open()
   
-  window.location.href = nome+".pdf"
+  
 }
