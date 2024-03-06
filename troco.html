@@ -66,15 +66,24 @@
     var troco = recebido - produto
     if (troco < 0) {
       
-      troco = 0
+      resultado.innerHTML = "O cliente te deve "+(produto - recebido)+" Reais!"
+      
+    } else {
+      
+      resultado.innerHTML = "Você deve ao cliente  "+(recebido - produto)+" Reais!"
       
     }
-    resultado.innerHTML = "Você deve entregar de troco "+troco+" Reais!"
+  ver()
+  function ver() {
+    
+  
+  if (produto === recebido) {
+    
+    resultado.innerHTML = "O pagamento foi concluído!"
     
   }
-  
-  
-  
+  }
+  }
 </script>
 </body>
 
