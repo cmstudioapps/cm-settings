@@ -1,0 +1,16 @@
+{
+  "name": "cm settings",
+  "short_name": "settings",
+  "description": "/",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "black",
+  "icons": [
+    {
+      "src": "https://i.imgur.com/dYzm6Se.jpeg",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
